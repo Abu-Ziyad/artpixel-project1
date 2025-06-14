@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtPixel - اكتشف الإبداع</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><a href="index.html">Art<span>Pixel</span></a></div>
+        <div class="search-bar">
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="ابحث عن صور عالية الجودة..." required>
+                <button type="submit" class="search-icon-btn">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.02944 20 2 15.9706 2 11C2 6.02944 6.02944 2 11 2C15.9706 2 20 6.02944 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path></svg>
+                </button>
+            </form>
+        </div>
+        <div class="user-actions">
+            <a href="create-pin.html" class="icon-btn" title="إنشاء منشور جديد"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg></a>
+            <a href="profile.html"><img id="header-avatar" src="" alt="ملفي الشخصي" class="user-avatar"></a>
+        </div>
+    </header>
+
+    <main>
+        <div id="gallery-container" class="gallery-container"></div>
+    </main>
+    
+    <script src="data-manager.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الصورة - ArtPixel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo"><a href="index.html">Art<span>Pixel</span></a></div>
+        <div class="user-actions">
+            <a href="create-pin.html" class="icon-btn" title="إنشاء منشور جديد"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg></a>
+            <a href="profile.html"><img id="header-avatar" src="" alt="ملفي الشخصي" class="user-avatar"></a>
+        </div>
+    </header>
+    <main class="container">
+        <div id="pin-page-content" class="pin-page-layout">
+            <div class="image-preview-box"><div class="loading-spinner"></div></div>
+            <div class="image-details-box"></div>
+        </div>
+        <section class="suggestions-section">
+            <h2>قد يعجبك أيضاً</h2>
+            <div id="suggestions-gallery" class="gallery-container"></div>
+        </section>
+    </main>
+    <script src="data-manager.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>

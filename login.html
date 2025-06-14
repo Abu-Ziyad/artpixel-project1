@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - ArtPixel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <form id="login-form" class="auth-form">
+            <h2>مرحباً بك في Art<span>Pixel</span></h2>
+            <p>أدخل اسمك للدخول وتخصيص تجربتك. (سيتم حفظه في متصفحك فقط)</p>
+            <input type="text" id="username" placeholder="اكتب اسمك هنا" required>
+            <button type="submit">دخول</button>
+        </form>
+    </div>
+    <script src="data-manager.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (username) {
+                const user = {
+                    name: username,
+                    handle: `@${username.toLowerCase().replace(/\s/g, '')}`,
+                    avatar: `https://i.pravatar.cc/150?u=${encodeURIComponent(username)}`,
+                    savedPinIds: []
+                };
+                localStorage.setItem('artpixelUser_gh', JSON.stringify(user));
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

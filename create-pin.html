@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء منشور جديد - ArtPixel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo"><a href="index.html">Art<span>Pixel</span></a></div>
+        <div class="user-actions">
+            <a href="profile.html"><img id="header-avatar" src="" alt="ملفي الشخصي" class="user-avatar"></a>
+        </div>
+    </header>
+    <main class="container">
+        <form id="create-pin-form" class="auth-form" style="max-width: 600px; margin: 40px auto;">
+            <h2>إنشاء منشور جديد</h2>
+            <p>الصق رابط صورة من الإنترنت وأضف وصفًا لها.</p>
+            <input type="url" id="image-url" placeholder="الصق رابط الصورة هنا (e.g., https://.../image.jpg)" required>
+            <textarea id="description" placeholder="صف عملك الفني..." rows="4" required></textarea>
+            <button type="submit">نشر الآن</button>
+        </form>
+    </main>
+    <script src="data-manager.js"></script>
+    <script src="create.js"></script>
+</body>
+</html>
